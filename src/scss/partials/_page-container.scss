@@ -1,0 +1,17 @@
+/*======================================
+=            page-container            =
+======================================*/
+
+.page-container {
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+        padding: 0 15px;
+    }
+}
+
+
+/*=====  End of page-container  ======*/

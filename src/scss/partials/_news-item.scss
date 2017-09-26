@@ -1,0 +1,73 @@
+/*=================================
+=            news-item            =
+=================================*/
+
+.news-item {
+    background: #f6f3f2;
+    height: 100%;
+    &--white {
+        background: #fff;
+        .news-item__content {
+            padding: 25px 5px 10px 0px;
+        }
+        .news-item__pic {
+            height: 170px;
+        }
+        .news-item__title {
+            @include font-size(16px, 26px);
+            @include hyundai(medium);
+            margin-bottom: 10px;
+            @media screen and (max-width: 767px) {
+                @include font-size(14px, 20px);
+            }
+        }
+        .news-item__date,
+        .news-item__time {
+            small {
+                color: #000;
+                @media screen and (max-width: 767px) {
+                    @include font-size(12px, 1);
+                }
+            }
+        }
+        .news-item__date {
+            @media screen and (max-width: 767px) {
+                margin-right: 3px;
+            }
+        }
+    }
+}
+
+.news-item__pic {
+    height: 235px;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+    background-position: center center!important;
+}
+
+.news-item__content {
+    padding: 30px 30px 45px 30px;
+    font-size: 0;
+}
+
+.news-item__title {
+    @include font-size(20px, 1);
+    @include hyundai(medium);
+    margin-bottom: 15px;
+}
+
+.news-item__date {
+    @include inline-block(middle);
+    margin-right: 10px;
+    text-decoration: none!important;
+    &:hover {
+        text-decoration: none!important;
+    }
+}
+
+.news-item__time {
+    @include inline-block(middle);
+}
+
+
+/*=====  End of news-item  ======*/

@@ -1,0 +1,20 @@
+/*================================
+=            required            =
+================================*/
+
+.required {
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        height: 5px;
+        top:0;
+        right: -10px;
+        background: url('../assets/img/content/bul_req.png') no-repeat top left;
+        background-size: 6px auto;
+    }
+}
+
+
+/*=====  End of required  ======*/

@@ -1,0 +1,69 @@
+/*============================
+=            tool            =
+============================*/
+
+.tool {
+    position: relative;
+    width: 100%;
+}
+
+.tool__wrap {
+    width: 100%;
+    max-width: 1080px;
+    padding: 25px 40px 25px 40px;
+    margin: 0 auto;
+    background: #002c5f;
+    @media screen and (max-width: 1200px) {
+        padding: 25px 40px 25px 20px;
+    }
+    @media screen and (max-width:767px) {
+        padding: 15px;
+    }
+}
+
+.tool__item {
+    position: relative;
+    @include inline-block(middle);
+    &--print {
+        margin-right: 30px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            transform: translateY(-50%);
+            background: url('../assets/img/icons/bul_tool.gif') no-repeat top left;
+        }
+        @media screen and (max-width:1200px) {
+            display: none;
+        }
+    }
+    &--email {
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 18px;
+            height: 16px;
+            transform: translateY(-50%);
+            background: url('../assets/img/icons/bul_tool.gif') no-repeat 0 -39px;
+        }
+    }
+}
+
+.tool__link {
+    @include font-size(14px,
+    1);
+    @include hyundai(medium);
+    color: #fff;
+    padding-left: 25px;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+/*=====  End of tool  ======*/

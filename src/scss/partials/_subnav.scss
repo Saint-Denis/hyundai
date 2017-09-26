@@ -1,0 +1,200 @@
+/*==============================
+=            subnav            =
+==============================*/
+
+.subnav {
+    position: absolute;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    transition: all .1s ease-in;
+    z-index: 50;
+    margin-top: 4px;
+    opacity: 0;
+    visibility: hidden;
+    @media screen and (max-width: 992px) {
+        display: none;
+        position:relative;
+        margin-top: 0;
+        opacity:1;
+        visibility:visible;
+    }
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        .subnav__wrap {
+            z-index: 55;
+        }
+    }
+}
+
+
+.subnav .subnav__wrap {
+    position: relative;
+}
+
+.subnav__wrap {
+    width: 100%;
+    max-width: 1160px;
+    padding: 15px 20px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+    z-index: -1;
+    @media screen and (max-width: 992px) {
+        padding: 0;
+    }
+}
+
+.subnav__close {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    background: url('../assets/img/svg/close-black.svg') no-repeat 0 0;
+    z-index: 5;
+    @media screen and (max-width: 1200px) {
+        right: 20px;
+    }
+    @media screen and (max-width:992px) {
+        display: none;
+    }
+}
+
+.subnav__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    width: 245px;
+    @media screen and (max-width: 992px) {
+        width: 100%;
+    }
+    &--lv2 {
+        display: none;
+        position: absolute;
+        top: 15px;
+        left: 285px;
+        @media screen and (max-width: 992px) {
+            position: static;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            border-bottom: 1px solid #e8e8e8;
+            background: #F6F3F2;
+            .subnav__link {
+                @include font-size(14px,
+                40px) padding: 0 50px;
+                border-bottom: 0;
+                color: #666;
+            }
+        }
+    }
+    &--lv3 {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 285px;
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
+    }
+}
+
+
+.subnav__link {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: #767676;
+    position: relative;
+    line-height: 38px;
+
+    &:hover,
+    &:active {
+        color: #00a1c7;
+    }
+
+    &--outer-link {
+        &::after {
+            content: "";
+            overflow: hidden;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 15px;
+            width: 7px;
+            height: 7px;
+            background: url("../assets/img/icons/ico_gnb_newwin.png") no-repeat 0 -7px;
+            font-size: 0;
+            line-height: 0;
+
+            @media screen and (max-width: 992px) {
+                display:none;
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        display: block;
+        position: relative;
+        @include font-size(16px,
+        1);
+        padding: 22px 16px;
+        border-bottom: 1px solid #e8e8e8;
+        text-align: left;
+        color: #000;
+        background: #F6F3F2;
+        cursor: pointer;
+        user-select: none;
+    }
+}
+
+
+
+.subnav__item[data-level^="lv"]>.subnav__link {
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 0;
+        width: 4px;
+        height: 7px;
+        background: url('../assets/img/content/gnb_arr.png') no-repeat top left;
+        @media screen and (max-width: 992px) {
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%) rotate(0);
+            width: 7px;
+            height: 7px;
+            background: url('../assets/img/svg/down-arrow-black.svg') no-repeat 0 0;
+            transition: all 0.2s ease-in;
+        }
+    }
+}
+
+.subnav__item[data-level="lv3"]>.subnav__link {
+    &::after {
+        @media screen and (max-width: 992px) {
+            display: none;
+        }
+    }
+}
+
+.subnav__item {
+    &.active > .subnav__link {
+        color:#00a1c7;
+        @media screen and (max-width: 992px) {
+            &::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+}
+
+
+
+
+
+/*=====  End of subnav  ======*/

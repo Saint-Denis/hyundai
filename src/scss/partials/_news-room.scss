@@ -1,0 +1,129 @@
+/*================================
+=            news-room            =
+================================*/
+
+.news-room__wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+        padding: 0;
+    }
+}
+
+ul.news-room__controls {
+    margin-bottom: 0;
+    display: flex;
+    @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+}
+
+li.news-room__controls-item {
+    width: 33.33333%;
+    padding-left: 0!important;
+    margin-bottom: 0!important;
+    background: #444;
+    transition: all 0.2s ease;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+    &::before {
+        display: none;
+    }
+    &.active {
+        background: #fff;
+        @media screen and (max-width: 767px) {
+            background: #fff;
+        }
+        .news-room__controls-link {
+            color: #000;
+            @media screen and (max-width: 767px) {
+                color: #000;
+            }
+        }
+    }
+    &:hover {
+        background: #fff;
+        .news-room__controls-link {
+            color: #000;
+        }
+    }
+}
+
+a.news-room__controls-link {
+    display: block;
+    @include font-size(14px, 1);
+    color: #fff;
+    padding: 23px 20px;
+    text-align: center;
+    text-decoration: none;
+    @media screen and (max-width: 767px) {
+        @include font-size(12px, 1);
+        color: #fff;
+        padding: 18px 20px;
+        color: #fff;
+        text-align: left;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.news-room__content {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    @media screen and (max-width: 767px) {
+        padding: 0 15px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+
+.news-room__item {
+    display: none;
+    &.active {
+        display: block;
+    }
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
+}
+
+.news-room__mobile-toggle {
+    position: relative;
+    display: none;
+    @include font-size(12px, 1);
+    color: #fff;
+    padding: 18px 20px;
+    background: #444;
+    color: #fff;
+    text-align: left;
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        width: 7px;
+        height: 7px;
+        transform: translateY(-50%) rotate(0);
+        background: url('../assets/img/icons/tab_right_arr_mobile.png') no-repeat right center;
+        background-size: 7px auto;
+        transition: all 0.2s ease-in;
+    }
+    &.active::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+}
+
+
+/*=====  End of news-room  ======*/

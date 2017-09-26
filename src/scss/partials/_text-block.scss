@@ -1,0 +1,37 @@
+/*==================================
+=            text-block            =
+==================================*/
+.text-block {
+	padding:100px 0 50px 0px;
+	background:#f6f3f2;
+
+	&--bg {
+		background:url('../assets/img/bg/con-stg-06-pc.png') no-repeat center bottom;
+	}
+
+	 @media screen and (max-width: 740px) {
+        padding: 70px 0px 25px 0px;
+    }
+}
+
+.text-block__wrap {
+	   position: relative;
+    width: 100%;
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+        padding: 0 15px;
+    }
+}
+
+h2.text-block__title {
+	text-align:center;
+	margin-bottom: 55px;
+	@media screen and (max-width: 740px) {
+        margin-bottom:30px;
+    }
+}
+
+
+/*=====  End of text-block  ======*/

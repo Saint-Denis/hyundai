@@ -1,0 +1,50 @@
+/*===============================
+=            top-img            =
+===============================*/
+
+.headline-block {
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    height: 540px;
+    width: 100%;
+    padding-top: 71px;
+    color: #fff;
+    @media screen and (max-width: 767px) {
+        padding-top: 50px;
+    }
+    h1 {
+        @include font-size(58px, 64px);
+        color: #fff;
+        text-align: left;
+        max-width: 320px;
+        margin: 0;
+        margin-bottom: 12px;
+        @media screen and (max-width: 767px) {
+            @include font-size(30px, 35px);
+            text-align: center;
+        }
+    }
+    p {
+        @include font-size(20px, 26px);
+        max-width: 440px;
+        @media screen and (max-width: 767px) {
+            @include font-size(14px, 18px);
+            text-align: left;
+            max-width: 100%;
+        }
+    }
+}
+
+.headline-block__wrap {
+    width: 100%;
+    max-width: 1160px;
+    padding: 0 20px;
+    position: relative;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+        padding: 0 15px;
+    }
+}
+
+
+/*=====  End of top-img  ======*/

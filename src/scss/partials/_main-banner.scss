@@ -1,0 +1,200 @@
+/*===================================
+=            main-banner            =
+===================================*/
+
+.main-banner {
+    position: relative;
+    min-height: 400px;
+    @media screen and (max-width: 740px) {
+        min-height: auto;
+    }
+    .slick-prev,
+    .slick-next {
+        z-index: 5;
+    }
+    .slick-prev {
+        top: calc(50% - 110px);
+        left: 30px;
+        @media screen and (min-width: 1800px) {
+            left: 70px;
+        }
+    }
+    .slick-next {
+        top: calc(50% - 110px);
+        right: 35px;
+        @media screen and (min-width: 1800px) {
+            right: 75px;
+        }
+    }
+    .slick-prev:before,
+    .slick-next:before {
+        content: '';
+    }
+    .slick-prev:before {
+        display: block;
+        width: 44px;
+        height: 44px;
+        background: url('../assets/img/icons/btn_main_prev.png') no-repeat 0 0;
+    }
+    .slick-next:before {
+        display: block;
+        width: 44px;
+        height: 44px;
+        background: url('../assets/img/icons/btn_main_next.png') no-repeat 0 0;
+    }
+    ul.slick-dots {
+        position: absolute;
+        bottom: 60px;
+        margin-bottom: 0;
+        @media screen and (max-width: 740px) {
+            position: absolute;
+            bottom: 20px;
+        }
+        li {
+            width: 12px;
+            height: 12px;
+            margin-bottom: 0;
+            padding-left: 0;
+            border-radius: 50%;
+            button {
+                width: 12px;
+                height: 12px;
+                padding: 0;
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid grey;
+                &::before {
+                    content: '';
+                    color: #fff;
+                    opacity: 1;
+                    top: 0;
+                    left: 0;
+                    width: 12px;
+                    height: 12px;
+                    border: 1px solid transparent;
+                }
+            }
+            &::before {
+                content: '';
+                opacity: 1;
+                font-size: 0;
+                background: #fff;
+                border-radius: 50%;
+                width: auto;
+            }
+            &.slick-active {
+                border: 1px solid transparent;
+            }
+            &.slick-active button::before {
+                background: #00aad2;
+                border: 1px solid #00aad2;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+.main-banner__slider {
+    &.slick-slider {
+       
+        margin-bottom: 0;
+    }
+}
+
+.main-banner__item {
+    width: 100%;
+    height: 830px;
+    padding: 0 60px;
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    background-position: center bottom!important;
+    @media screen and (max-width: 1300px) {
+        padding: 0 20px;
+    }
+    @media screen and (max-width: 740px) {
+        height: auto;
+        padding: 0 15px;
+        padding-top: 55px;
+        padding-bottom: 60px;
+    }
+}
+
+.main-banner__inner {
+    position: relative;
+    height: 720px;
+    margin: 0 auto;
+    overflow: hidden;
+    max-width: 1800px;
+    @media screen and (max-width: 740px) {
+        height: 800px;
+    }
+    @media screen and (max-width: 480px) {
+        height: 550px;
+    }
+    @media screen and (max-width: 360px) {
+        height: 390px;
+    }
+}
+
+.main-banner__visual-area {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat!important;
+    background-position: center center!important;
+    background-size: cover!important;
+    @media screen and (max-width: 1215px) {
+        background-position: -350px center!important;
+    }
+    @media screen and (max-width:740px) {
+        position: relative;
+        background-position: 0px 0px!important;
+    }
+}
+
+.main-banner__wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    @media screen and (max-width: 740px) {
+        display: flex;
+        align-items: flex-end;
+    }
+}
+
+.main-banner__btn {
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+    z-index: 1;
+   
+    @media screen and (max-width: 767px) {
+        width: auto!important;
+    }
+    @media screen and (max-width: 740px) {
+        position: relative;
+        left: 0;
+    }
+}
+
+.slick-controls__btn {
+    width: 12px!important;
+    height: 12px!important;
+    overflow: hidden;
+    text-indent: -9999px;
+    background: url('../assets/img/icons/btn_play_stop.png') no-repeat;
+    border-radius: 0!important;
+    top: 6px;
+    cursor: pointer;
+    &.play {
+        background-position: 0 -12px;
+    }
+}
+
+
+/*=====  End of main-banner  ======*/

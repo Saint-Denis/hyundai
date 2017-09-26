@@ -1,0 +1,16 @@
+/*===================================
+=            btn-section            =
+===================================*/
+
+.btn-section {
+    margin-bottom: 50px;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 40px;
+    }
+    &--center {
+        text-align: center;
+    }
+}
+
+
+/*=====  End of btn-section  ======*/

@@ -1,0 +1,66 @@
+/*=============================
+=            Mixin            =
+=============================*/
+
+
+//Шрифты
+
+//Шрифты
+@mixin hyundai($style:regular) {
+     @if $style==regular {
+        font-family: "HyundaiRegular", "Arial", sans-serif;
+       
+    }
+
+    @if $style==medium {
+       font-family: "HyundaiMedium", "Arial", sans-serif;
+       
+    }
+
+    @if $style==bold {
+        font-family: "HyundaiBold", "Arial", sans-serif;
+        
+    }
+
+   
+    @if $style==light {
+        font-family: "HyundaiLight", "Arial", sans-serif;
+        
+    }
+
+   
+}
+
+
+
+@mixin font-size($sizeValue, $line) {
+    font-size: $sizeValue;
+    line-height:$line;
+}
+
+@mixin inline-block($vertical:top) {
+    display: inline-block;
+    vertical-align: $vertical;
+}
+
+
+
+
+//Клеарфикс
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+//Соц иконки
+@each $socials in (vk,fb,tw) {
+    .social-icon--#{$socials} {
+        background:url(../assets/img/icons/#{$socials}.png) no-repeat 0 0;
+    }
+}
+
+
+/*=====  End of Mixin  ======*/

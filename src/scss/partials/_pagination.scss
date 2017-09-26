@@ -1,0 +1,111 @@
+/*==================================
+=            pagination            =
+==================================*/
+
+.pagination {
+	display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.pagination__list {
+    display: flex;
+}
+
+.pagination__wrap {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.pagination__controls {
+    display: flex;
+    align-items: center;
+}
+
+.pagination__prev {
+    display: block;
+    width: 7px;
+    height: 11px;
+    background: url('../assets/img/icons/btn_paging.png') no-repeat 0 0;
+    margin: 0 8px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-position: -32px -11px;
+    background-size: auto 22px;
+    &.disabled {
+        background-position: -32px 0;
+        pointer-events: none;
+    }
+}
+
+.pagination__next {
+    display: block;
+    width: 7px;
+    height: 11px;
+    background: url('../assets/img/icons/btn_paging.png') no-repeat 0 0;
+    margin: 0 8px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-position: -38px -11px;
+    background-size: auto 22px;
+    &.disabled {
+        background-position: -38px 0;
+        pointer-events: none;
+    }
+}
+
+.pagination__begin {
+    display: block;
+    width: 13px;
+    height: 11px;
+    background: url('../assets/img/icons/btn_paging.png') no-repeat 0 0;
+    margin: 0 8px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-position: 0 -11px;
+    background-size: auto 22px;
+    &.disabled {
+        background-position: 0 0;
+        pointer-events: none;
+    }
+}
+
+.pagination__end {
+    display: block;
+    width: 13px;
+    height: 11px;
+    background: url('../assets/img/icons/btn_paging.png') no-repeat 0 0;
+    margin: 0 8px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-position: right -11px;
+    background-size: auto 22px;
+    &.disabled {
+        background-position: right 0;
+        pointer-events: none;
+    }
+}
+
+.pagination__item {
+    &.active {
+        .pagination__link {
+            color: #00aad2;
+        }
+    }
+}
+
+.pagination__link {
+    @include hyundai(medium);
+    @include font-size(16px,
+    1);
+    margin: 0 9px;
+    color: #000;
+    &:hover {
+        color: #00aad2;
+        text-decoration: underline;
+    }
+}
+
+
+/*=====  End of pagination  ======*/

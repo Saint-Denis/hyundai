@@ -1,0 +1,36 @@
+/*=====================================
+=            contact-panel            =
+=====================================*/
+
+.contact-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    bottom: 55px;
+    background: #fff;
+    align-items: center;
+    padding: 35px 20px 35px 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in;
+    z-index:70;
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.contact-panel__link {
+    display: block;
+    @include font-size(17px, 1);
+    margin-bottom: 25px;
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+
+/*=====  End of contact-panel  ======*/

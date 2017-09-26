@@ -1,0 +1,115 @@
+/*==================================
+=            models-tab            =
+==================================*/
+
+.models-tab__controls {
+    display: flex;
+    list-style: none;
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+}
+
+.models-tab__controls-item {
+    width: 13.39%;
+    max-width: 150px;
+    @media screen and (max-width: 1200px) {
+        max-width: 100%;
+    }
+    &.active {
+        .models-tab__controls-link {
+            background: #fff;
+            color:#000;
+            
+        }
+    }
+    &--all {
+        .models-tab__controls-link {
+            background: #002c5f;
+        }
+    }
+    &:hover {
+        .models-tab__controls-link {
+            background: #fff;
+            color: #444;
+            text-decoration: underline;
+        }
+    }
+}
+
+.models-tab__controls-link {
+    display: block;
+    @include hyundai(medium);
+    @include font-size(16px, 1);
+    color: #fff;
+    padding: 12px;
+    background: #444;
+    text-align: center;
+    @media screen and (max-width: 1200px) {
+        @include font-size(12px, 1);
+    }
+}
+
+
+.models-tab__list {
+    list-style: none;
+}
+
+.models-tab__item {
+    display: none;
+    &.active {
+        .models-tab__heading::before {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+    @media screen and (max-width: 992px) {
+        &.active {
+            .models-tab__heading{
+                color:#00aad2;
+            }
+            .models-tab__content {
+                display: block;
+            }
+        }
+        display: block;
+    }
+    &.active {
+        display: block;
+    }
+}
+
+.models-tab__heading {
+    display: none;
+    @media screen and (max-width: 992px) {
+        position: relative;
+        @include font-size(16px, 1) display: block;
+        padding: 22px 16px;
+        border-bottom: 1px solid #e8e8e8;
+        text-align: left;
+        color: #000;
+        background: #F6F3F2;
+        cursor: pointer;
+        user-select: none;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%) rotate(0);
+            width: 7px;
+            height: 7px;
+            background: url('../assets/img/svg/down-arrow-black.svg') no-repeat 0 0;
+            transition: all 0.2s ease-in;
+        }
+    }
+}
+
+.models-tab__content {
+    @media screen and (max-width: 992px) {
+        display: none;
+        background: #F6F3F2;
+    }
+}
+
+
+/*=====  End of models-tab  ======*/

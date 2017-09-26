@@ -1,0 +1,43 @@
+/*=============================
+=            error            =
+=============================*/
+
+.error {
+    .page-form__label,
+    .feedback-form__label{
+        display: none;
+
+        @media screen and (max-width: 767px) {
+            display: block;
+        }
+    }
+    .page-form__label.error__text,
+    .feedback-form__label.error__text {
+        display: block;
+        color: red;
+
+        @media screen and (max-width: 767px) {
+           display:none;
+        }
+    }
+    input {
+        border: 1px solid red!important;
+        &::-webkit-input-placeholder {
+            color: red!important;
+        }
+        &:-moz-placeholder {
+            color: red!important;
+        }
+        &:-ms-input-placeholder {
+            color: red!important;
+        }
+    }
+}
+
+.page-form__label.error__text,
+.feedback-form__label.error__text {
+    display: none;
+}
+
+
+/*=====  End of error  ======*/

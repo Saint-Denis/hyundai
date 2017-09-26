@@ -1,0 +1,41 @@
+/*===================================
+=            breadcrumbs            =
+===================================*/
+
+.breadcrumbs {
+  float: left;
+    padding: 30px 0;
+    overflow: hidden;
+
+    @media screen and (max-width:992px) {
+    	display: none;
+    }
+}
+.breadcrumbs__wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+        padding: 0 15px;
+    }
+}
+
+.breadcrumbs__item {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+a.breadcrumbs__item {
+    margin-right: 10px;
+    padding: 0 15px 0 0;
+    background: url(../assets/img/content/bg_breadcrumb.png) no-repeat 100% 5px;
+}
+
+span.breadcrumbs__item {
+    color: #00aad2;
+    font-family: 'HyundaiMedium';
+}
+
+
+/*=====  End of breadcrumbs  ======*/

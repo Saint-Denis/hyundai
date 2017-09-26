@@ -1,0 +1,69 @@
+/*====================================
+=            footer-panel            =
+====================================*/
+
+.footer-panel {
+    display: none;
+    @media screen and (max-width: 767px) {
+        background: #002c5f;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        bottom: -55px;
+        width: 100%;
+        height: 55px;
+        padding: 0 15px;
+        z-index: 70;
+        transition: all 0.3s ease-in;
+        &.show {
+            bottom: 0px;
+        }
+    }
+    .logo {
+        width: 37px;
+        height: 20px;
+        background: url('../assets/img/icons/footer_logo_mobileq.png') no-repeat 0 0;
+        background-size: contain;
+            margin: inherit;
+        margin-bottom: 0;
+    }
+}
+
+.footer-panel__contact {
+    @include inline-block(middle);
+    width: 22px;
+    height: 23px;
+    border: none;
+    text-decoration: none;
+    background: url('../assets/img/icons/btn_quick_qmenu.png') no-repeat;
+    background-size: 22px auto;
+    text-indent: -9999px;
+    margin-right: 45px;
+}
+
+.footer-panel__share {
+    @include inline-block(middle);
+    width: 18px;
+    height: 23px;
+    border: none;
+    text-decoration: none;
+    background: url('../assets/img/icons/btn_quick_share.png') no-repeat;
+    background-size: 18px auto;
+    text-indent: -9999px;
+    margin-right: 45px;
+}
+
+.footer-panel__top {
+    @include inline-block(middle);
+    width: 23px;
+    height: 23px;
+    border: none;
+    text-decoration: none;
+    background: url('../assets/img/icons/btn_quick_top.png') no-repeat;
+    background-size: 23px auto;
+    text-indent: -9999px;
+}
+
+
+/*=====  End of footer-panel  ======*/

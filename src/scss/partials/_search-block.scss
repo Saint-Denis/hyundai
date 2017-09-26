@@ -1,0 +1,56 @@
+/*====================================
+=            search-block            =
+====================================*/
+
+.search-block {
+    background: #f6f3f2;
+    padding: 40px 0px;
+    @media screen and (max-width: 992px) {
+        padding: 20px 0px;
+    }
+}
+
+.search-block__form {
+    position: relative;
+    max-width: 460px;
+    width: 100%;
+    @media screen and (max-width: 992px) {
+        max-width: 100%;
+    }
+}
+
+.search-block__wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+        padding: 0 15px;
+    }
+}
+
+.search-block__search {
+    padding: 8px 20px!important;
+    padding-right: 55px!important;
+    font-size: 14px!important;
+    line-height: 1!important;
+    height: 44px;
+}
+
+.search-block__submit {
+    position: absolute;
+    background: url('../assets/img/svg/search-black.svg') no-repeat center center;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 44px;
+    overflow: hidden;
+    text-indent: -99999px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/*=====  End of search-block  ======*/

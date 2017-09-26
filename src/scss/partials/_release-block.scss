@@ -1,0 +1,97 @@
+/*=====================================
+=            release-block            =
+=====================================*/
+
+.release-block {
+    position: relative;
+    padding: 60px 0 60px 0;
+    background-color: #f6f3f2;
+    @media screen and (max-width: 992px) {
+        padding: 40px 0 40px 0;
+    }
+    h1 {
+        @include font-size(44px, 54px);
+        @include hyundai(medium);
+        color: #000;
+        clear: both;
+        margin-bottom: 0;
+        @media screen and (max-width: 992px) {
+            margin-bottom: 15px;
+            order: 2;
+        }
+        @media screen and (max-width: 767px) {
+            @include font-size(30px, 35px);
+            text-align: left;
+        }
+    }
+}
+
+.release-block__wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    @include clearfix();
+    @media screen and (max-width: 992px) {
+        display: flex;
+        flex-direction: column;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 0 15px;
+    }
+}
+
+.release-block__type {
+    float: left;
+    @include font-size(20px, 1);
+    @include hyundai(medium);
+    margin-bottom: 15px;
+    @media screen and (max-width: 992px) {
+        order:1;
+        float: none;
+    }
+    @media screen and (max-width: 767px) {
+        margin-bottom: 15px;
+    }
+}
+
+.release-block__data {
+    float: right;
+    display: flex;
+    align-items: center;
+    @include hyundai(regular);
+    @include font-size(14px, 20px);
+    color: #666;
+    @media screen and (max-width: 992px) {
+        order:3;
+        float: none;
+        justify-content: flex-start;
+         @include font-size(12px, 1);
+    }
+}
+
+.release-block__row {
+    margin-bottom: 20px;
+}
+
+.release-block__date {
+    margin-right: 10px;
+}
+
+.release-block__number {
+    position: relative;
+    padding-left: 20px;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 10px;
+        top: 1px;
+        left: 10px;
+        background: #e2dad4;
+    }
+}
+
+
+/*=====  End of release-block  ======*/

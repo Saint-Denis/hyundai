@@ -1,0 +1,16 @@
+/*====================================
+=            sliding-line            =
+====================================*/
+.sliding-line {
+    border-bottom: 4px solid #00aad2;
+    position: absolute;
+    bottom: -4px;
+  
+
+    @media screen and (max-width: 992px) {
+        display: none!important;
+    }
+}
+
+
+/*=====  End of sliding-line  ======*/

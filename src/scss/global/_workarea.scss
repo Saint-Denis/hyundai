@@ -1,0 +1,323 @@
+/*================================
+=            workarea            =
+================================*/
+
+.workarea {
+    h1 {
+        @include font-size(58px, 64px);
+        margin: 0;
+        margin-bottom: 20px;
+        @include hyundai(medium);
+        @media screen and (max-width: 767px) {
+            @include font-size(30px, 35px);
+        }
+    }
+    h2 {
+        @include font-size(44px, 54px);
+        margin: 0;
+        margin-bottom: 15px;
+        @include hyundai(medium);
+        @media screen and (max-width: 767px) {
+            @include font-size(26px, 30px);
+        }
+    }
+    h3 {
+        @include font-size(30px, 40px);
+        margin: 0;
+        margin-bottom: 15px;
+        font-weight: normal;
+        @include hyundai(medium);
+        @media screen and (max-width: 767px) {
+            @include font-size(22px, 25px);
+        }
+    }
+    h4 {
+        @include font-size(26px, 36px);
+        margin: 0;
+        margin-bottom: 15px;
+        font-weight: normal;
+        @include hyundai(medium);
+        @media screen and (max-width: 767px) {
+            @include font-size(18px, 25px);
+        }
+    }
+    h5 {
+        @include font-size(20px, 30px);
+        margin: 0;
+        margin-bottom: 15px;
+        font-weight: normal;
+        @include hyundai(medium);
+        @media screen and (max-width: 767px) {
+            @include font-size(16px, 20px);
+        }
+    }
+    h6 {
+        @include font-size(16px, 28px);
+        margin: 0;
+        margin-bottom: 15pxs;
+        font-weight: normal;
+        @include hyundai(medium);
+        @media screen and (max-width: 767px) {
+            @include font-size(16px, 20px);
+        }
+    }
+    p {
+        @include font-size(16px, 28px);
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    a {
+        &:hover {
+            text-decoration: underline;
+            border: none;
+        }
+    }
+    small {
+        @include font-size(14px, 1);
+        color: #666;
+    }
+    video {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        display: block;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"] {
+        @include font-size(20px, 1);
+        width: 100%;
+        color: #000;
+        padding: 16px 20px;
+        border: 1px solid #e4dcd3;
+        @include font-size(14px, 1);
+        outline: none;
+        transition: all 0.2s ease-in;
+
+        @media screen and (max-width: 767px) {
+             padding: 13px 15px;
+        }
+        &::-webkit-input-placeholder {
+            color: #00aad2;
+        }
+        &:-moz-placeholder {
+            color: #00aad2;
+        }
+        &:-ms-input-placeholder {
+            color: #00aad2;
+        }
+        &:focus {
+            border: 1px solid #00aad2;
+            outline: none;
+        }
+    }
+    textarea {
+        @include font-size(14px, 1);
+        color: #000;
+        width: 100%;
+        border: 1px solid #e4dcd3;
+        transition: all 0.3s ease-in;
+        min-height: 150px;
+        resize: vertical;
+        padding: 13px 15px 13px 20px;
+        @media screen and (max-width: 767px) {
+             padding: 13px 15px;
+        }
+        &::-webkit-input-placeholder {
+            color: #00aad2;
+        }
+        &:-moz-placeholder {
+            color: #00aad2;
+        }
+        &:-ms-input-placeholder {
+            color: #00aad2;
+        }
+        &:focus {
+            border: 1px solid #00aad2;
+            outline: none;
+        }
+    }
+    strong {
+        @include hyundai(medium);
+    }
+    ul {
+        list-style: none;
+        margin-bottom: 20px;
+        li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                top: 10px;
+                left: 0;
+                width: 7px;
+                height: 7px;
+                background: #000;
+                border-radius: 50%;
+            }
+        }
+    }
+    ol {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+        margin-bottom: 20px;
+        li {
+            counter-increment: step-counter;
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            &::before {
+                content: counter(step-counter);
+                position: absolute;
+                top: 10px;
+                left: 0;
+               
+                @include font-size(16px, 1);
+                @include hyundai(medium);
+            }
+        }
+    }
+    table {
+        width: 100%;
+        table-layout: fixed;
+        border-top: 1px solid #e4dcd3;
+        border-left: 1px solid #e4dcd3;
+        border-bottom: 1px solid #e4dcd3;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+        @media screen and (max-width: 767px) {
+            table-layout: auto;
+        }
+        tr {
+            &:last-child td:nth-child(n+1) {
+                border-bottom: 0;
+            }
+            td:first-child {
+                @include hyundai(medium);
+                @include font-size(14px, 18px);
+                padding: 12px 30px 12px 30px;
+                text-align: left;
+                min-height: 43px;
+                border-bottom: 1px solid #fff;
+                border-right: 1px solid #e4dcd3;
+                background: #e4dcd3;
+                width: 21.42%;
+                @media screen and (max-width: 767px) {
+                    @include font-size(12px, 16px);
+                    padding: 6px 15px 6px 15pxs;
+                    min-height: 35px;
+                    border-bottom: 1px solid #fff;
+                    width: auto;
+                    border-right: 1px solid #e4dcd3;
+                    background: #e4dcd3;
+                }
+            }
+            td {
+                padding: 0 20px;
+                border-right: 1px solid #e4dcd3;
+                border-bottom: 1px solid #e4dcd3;
+                @include font-size(14px, 18px);
+                @media screen and (max-width: 767px) {
+                    @include font-size(12px, 16px);
+                    padding: 7px 15px;
+                    border-right: 1px solid #e4dcd3;
+                    border-bottom: 1px solid #e4dcd3;
+                }
+            }
+        }
+    }
+    input[type='radio'],
+    input[type='checkbox'] {
+        display: none;
+    }
+    input[type='checkbox'] + label {
+        @include font-size(14px, 1);
+        @include inline-block;
+        position: relative;
+        padding-left: 28px;
+        padding-right: 15px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.35s ease-in;
+        @media screen and (max-width: 767px)  {
+             @include font-size(12px, 1);
+                @include hyundai(medium);
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            margin-top: -9px;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #999;
+        }
+    }
+    input[type='checkbox']:checked + label::after {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: url('../assets/img/icons/checkbox.png') no-repeat center center;
+        background-size: 10px auto;
+    }
+    input[type='checkbox']:checked + label::before {
+        border: 2px solid #00aad2;
+    }
+    input[type='radio'] + label {
+        @include inline-block(middle);
+        position: relative;
+        padding-left: 35px;
+        padding-right: 15px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: all 0.35s ease-in;
+         @media screen and (max-width: 767px)  {
+             @include font-size(12px, 1);
+             @include hyundai(medium);
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            margin-top: -9px;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #999;
+            border-radius: 50%;
+        }
+    }
+    input[type='radio']:checked + label::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 4px;
+        border-radius: 50%;
+        background: #00aad2;
+    }
+
+     input[type='radio']:checked + label::before {
+        border: 2px solid #00aad2;
+    }
+}
+
+
+/*=====  End of workarea  ======*/

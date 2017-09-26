@@ -1,0 +1,21 @@
+/*================================
+=            img-area            =
+================================*/
+.img-area {
+	margin-bottom:20px;
+	 text-align:center;
+
+	img {
+
+		height: 600px;
+		width: auto;
+
+		@media screen and (max-width: 992px) {
+			
+			height: auto;
+		}
+	}
+}
+
+
+/*=====  End of img-area  ======*/

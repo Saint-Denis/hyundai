@@ -1,0 +1,85 @@
+/*===============================
+=            socials            =
+===============================*/
+
+.socials {
+    float: right;
+    overflow: hidden;
+    margin-top: -35px;
+    @media screen and (max-width: 1100px) {
+        float: none;
+        margin-top: 0;
+        margin-bottom: 25px;
+    }
+    @media screen and (max-width: 800px) {
+        float: none;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 0;
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #2b2a2a;
+        border-top: 1px solid #2b2a2a;
+    }
+}
+
+.socials__item {
+    float: left;
+    margin-right: 17px;
+    display: block;
+    width: 28px;
+    height: 22px;
+    @media screen and (max-width: 800px) {
+         margin-right: 0;
+        width: 20%;
+    }
+    &:last-of-type {
+        margin-right: 0;
+    }
+    &--fb {
+        background: url('../assets/img/content/sns_share_pc.png') 0 0 no-repeat;
+        @media screen and (max-width: 800px) {
+            background: url('../assets/img/content/sns_share_facebook_mobile.png') center center no-repeat;
+            background-size: auto 19px;
+        }
+    }
+    &--youtube {
+        background: url('../assets/img/content/sns_share_pc.png') -45px 0 no-repeat;
+        @media screen and (max-width: 800px) {
+            background: url('../assets/img/content/sns_share_youtube_mobile.png') center center no-repeat;
+            background-size: auto 16px;
+        }
+    }
+    &--google {
+        background: url('../assets/img/content/sns_share_pc.png') -90px 0 no-repeat;
+        @media screen and (max-width: 800px) {
+            background: url('../assets/img/content/sns_share_google_mobile.png') center center no-repeat;
+            background-size: auto 15px;
+        }
+    }
+    &--tw {
+        background: url('../assets/img/content/sns_share_pc.png') -135px 0 no-repeat;
+        @media screen and (max-width: 800px) {
+            background: url('../assets/img/content/sns_share_twitter_mobile.png') center center no-repeat;
+            background-size: auto 15px;
+        }
+    }
+    &--inst {
+        background: url('../assets/img/content/sns_share_pc.png') -180px 0 no-repeat;
+        @media screen and (max-width: 800px) {
+            background: url('../assets/img/content/sns_share_instar_mobile.png') center center no-repeat;
+            background-size: auto 20px;
+        }
+    }
+    @media screen and (max-width: 800px) {
+        float: none;
+        @include inline-block(middle);
+        margin-bottom: 0;
+    }
+}
+
+
+/*=====  End of socials  ======*/

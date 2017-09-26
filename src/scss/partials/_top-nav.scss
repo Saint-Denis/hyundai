@@ -1,0 +1,97 @@
+/*===============================
+=            top-nav            =
+===============================*/
+
+.top-nav {
+    max-width: 830px;
+    @include font-size(16px, 1);
+    @media screen and (max-width: 1200px) {
+        padding-left: 50px;
+    }
+    @media screen and (max-width:992px) {
+        position: absolute;
+        top: calc(100% + 19px);
+        right: -100%;
+        background: #f6f3f2;
+        padding-left: 0;
+        width: 90vw;
+        height: 100vh;
+        z-index: 100;
+        transition: all 0.2s ease-in;
+        &.active {
+            right: 0;
+        }
+    }
+}
+
+.top-nav__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    @media screen and (max-width: 992px) {
+        background: #e8e8e8;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+}
+
+
+
+.top-nav__item {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 20px;
+    &:first-of-type {
+        margin-left: 0;
+    }
+    &:last-of-type {
+        margin-right: 0;
+    }
+    @media screen and (max-width: 992px) {
+        margin: 0;
+        display: block;
+        background: #fff;
+        border-bottom: 1px solid #e8e8e8;
+        &.active .top-nav__link {
+            color: #00aad2;
+        }
+        &.active .top-nav__link::after {
+            background-position: 0 -23px;
+        }
+    }
+}
+
+.top-nav__link {
+    text-decoration: none;
+    display: block;
+    line-height: 66px;
+    color: #666;
+    font-size: 16px;
+    @include hyundai(medium);
+    @media screen and (max-width: 992px) {
+        position: relative;
+        @include hyundai(regular);
+        line-height: 60px;
+        padding: 0 16px;
+        color: #000;
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            width: 23px;
+            height: 23px;
+            position: absolute;
+            right: 12px;
+            transform: translateY(-50%);
+            background: url('../assets/img/content/gnb_menu_mo.png') no-repeat;
+            background-size: 23px auto;
+        }
+    }
+}
+
+.top-nav__link:hover {
+    color: #000;
+}
+
+
+/*=====  End of top-nav  ======*/

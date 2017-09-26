@@ -1,0 +1,92 @@
+/*======================================
+=            page-accordion            =
+======================================*/
+
+.page-accordion {
+    margin-bottom: 20px;
+    border: 1px solid #e4dcd3;
+}
+
+ul.page-accordion__list,
+ul.page-accordion__inner {
+    list-style: none;
+    margin-bottom: 0;
+    li {
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+    li::before {
+        display: none;
+    }
+}
+
+.page-accordion__inner {
+    padding: 30px 60px;
+    display: none;
+    @media screen and (max-width: 800px) {
+        padding: 20px 40px;
+    }
+    @media screen and (max-width:767px) {
+        padding: 20px 15px;
+    }
+}
+
+.page-accordion__list {
+    border-bottom: 0;
+    padding-bottom: 0
+}
+
+.page-accordion__trigger {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 58px;
+    padding: 0 30px;
+    line-height: 58px;
+    text-align: left;
+    @include hyundai(medium);
+    @include font-size(14px, 58px);
+    color: #000;
+    background: #fff;
+    border: 2px solid transparent;
+    @media screen and (max-width: 767px) {
+        padding: 0 15px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 30px;
+        width: 12px;
+        height: 7px;
+        margin-top: -3px;
+        background: url('../assets/img/icons/bg_toggle_small.png') no-repeat top left;
+        transition: all 0.2s ease-in;
+        @media screen and (max-width: 767px) {
+            right: 15px;
+        }
+    }
+    &:hover {
+        text-decoration: none!important;
+        border: 2px solid #a4c6fd!important;
+    }
+}
+
+.page-accordion__item {
+    border-bottom: 1px solid #e4dcd3;
+    &:last-child {
+        border-bottom: none;
+    }
+    &.active {
+        .page-accordion__trigger {
+            border: 2px solid #a4c6fd;
+        }
+        .page-accordion__trigger::after {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+
+/*=====  End of page-accordion  ======*/

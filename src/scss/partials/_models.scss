@@ -1,0 +1,50 @@
+/*==============================
+=            models            =
+==============================*/
+
+.models {
+    min-height: 400px;
+    padding: 0 60px 0 60px;
+    background: url('../assets/img/bg/worldwide-main-vehicle-stg-pc.jpg') no-repeat 0 0;
+    background-size: cover;
+
+    @media screen and (max-width:1300px) {
+          padding: 0 20px 0 20px;
+    }
+
+    @media screen and (max-width:740px) {
+    	padding: 0 15px 0 15px;
+    }
+   
+}
+
+.models__wrap {
+	height:100%;
+	max-width: 1800px;
+    margin: 0 auto;
+    padding: 100px 0 110px 0px;
+    background: #fff;
+    @media screen and (max-width:740px) {
+    	padding: 60px 0px 60px 0px;
+    	background: #F6F3F2;
+    }
+}
+
+h2.models__title {
+	text-align:center;
+	margin-bottom:55px;
+}
+
+.models__container {
+	position: relative;
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    text-align: center;
+    @media screen and (max-width: 767px) {
+        padding: 0 15px;
+    }
+}
+
+
+/*=====  End of models  ======*/

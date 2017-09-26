@@ -1,0 +1,51 @@
+/*=================================
+=            page-jump            =
+=================================*/
+
+.page-jump {
+    background: #e4dcd3;
+    border-top: 1px solid #fff;
+    padding: 60px 0;
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+        padding: 25px 0;
+    }
+}
+
+.page-jump__item {
+    font-size: 30px;
+    line-height: 40px;
+    color: #000;
+    font-family: "HyundaiMedium";
+    vertical-align: middle;
+    position: relative;
+    @media screen and (max-width: 768px) {
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+.page-jump__item--right {
+    float: right;
+    padding-right: 25px;
+}
+
+.page-jump__item--right:after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 13px;
+    height: 21px;
+    background: url('../assets/img/content/bg_navijump.gif') no-repeat 0 100%;
+    @media screen and (max-width: 768px) {
+        top: 2px;
+        width: 9px;
+        height: 16px;
+        background-size: cover;
+    }
+}
+
+
+/*=====  End of page-jump  ======*/

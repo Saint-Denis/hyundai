@@ -1,0 +1,91 @@
+/*===================================
+=            page-header            =
+===================================*/
+
+.page-header {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 2px 3px rgba(216,209,200,0.7);
+
+    
+
+    @media screen and (max-width: 992px) {
+        padding: 19px 0px;
+        width: 100%;
+        background: #fff;
+        z-index: 55;
+        &.fixed {
+            position: fixed;
+            top: 0;
+            right: 0;
+            margin-bottom: 0;
+            z-index: 55;
+        }
+       
+    }
+}
+
+.page-header .page-container {
+    position: static;
+    display: flex;
+    align-items:center;
+    @media screen and (max-width: 992px) {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &::after {
+            display: none;
+        }
+    }
+}
+
+.page-header__links {
+    position: relative;
+    margin-left:auto;
+    order:3;
+    @media screen and (max-width: 992px) {
+        float: none;
+        margin-right: 15px;
+        margin-left:0;
+        padding-top: 0; 
+        order:1;
+    }
+}
+
+.page-header__link {
+    @include inline-block(middle);
+    margin-right: 15px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -9999px;
+    &:last-child {
+        margin-right: 0;
+    }
+    @media screen and (max-width:992px) {
+        display: none;
+        &.search-link {
+            display: block;
+        }
+    }
+}
+
+.js-wrap {
+    width: 100%;
+    background: #fff;
+    position: absolute;
+    min-height: 0;
+    left: 0;
+    top: 66px;
+    transition: all 0.35s ease-in;
+    box-shadow: 0 1px 3px rgba(216, 209, 200, 0.7);
+    z-index: -1;
+    overflow: hidden;
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+}
+
+
+/*=====  End of page-header  ======*/

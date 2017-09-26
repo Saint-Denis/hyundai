@@ -1,0 +1,64 @@
+/*============================
+=            more            =
+============================*/
+
+.more {
+    padding: 50px 0;
+    padding-bottom: 30px;
+    @media screen and (max-width: 767px) {
+        padding: 30px 0;
+        padding-bottom: 10px;
+    }
+    background: #f6f3f2;
+}
+
+.more__wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+        padding: 0 15px;
+    }
+}
+
+.more__title {
+    @include font-size(30px, 40px);
+    @include hyundai(medium);
+    margin-bottom: 50px;
+    text-align: center;
+    @media screen and (max-width: 767px) {
+        @include font-size(22px, 25px);
+    }
+}
+
+.more__item {
+    margin-bottom: 20px;
+    &:hover {
+        text-decoration: none;
+        .more__item-title {
+            text-decoration: underline;
+        }
+    }
+}
+
+.more__item-pic {
+    height: 170px;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+    background-position: center center!important;
+    margin-bottom: 20px;
+}
+
+.more__item-title {
+    @include font-size(16px, 20px);
+    @include hyundai(medium);
+    color: #000;
+    span {
+        text-transform: uppercase;
+    }
+}
+
+
+/*=====  End of more  ======*/

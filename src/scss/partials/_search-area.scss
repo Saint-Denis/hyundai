@@ -1,0 +1,169 @@
+/*===================================
+=            search-area            =
+===================================*/
+
+.search-area {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 66px;
+    width: 100%;
+    height: 90px;
+    z-index: 50;
+    background: #f2f2f2;
+    height: 0;
+    transition: all 0.2s ease-in-out;
+    pointer-events:none;
+    &.open {
+        pointer-events:auto;
+        height: 90px;
+    }
+    @media screen and (max-width:992px) {
+        top: 37px;
+        height: 0px;
+        background: #00aad2;
+        &.open {
+            height: 60px;
+        }
+    }
+}
+
+.search-area__container {
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    padding: 20px 20px;
+    margin: 0 auto;
+    @media screen and (max-width: 992px) {
+        padding: 0px;
+    }
+}
+
+.search-area__form {
+    width: 100%;
+    border: 0;
+    height: 50px;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    @media screen and (max-width:992px) {
+        height: 100%;
+    }
+}
+
+.search-area__input {
+    @include font-size(20px, 50px);
+    width: 100%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 25px;
+    color: #000;
+    border: 2px solid transparent;
+    outline: none;
+    transition: all 0.2s ease-in-out;
+    &::-webkit-input-placeholder {
+        color: #f2f2f2;
+    }
+    &:-moz-placeholder {
+        color: #f2f2f2;
+    }
+    &:-ms-input-placeholder {
+        color: #f2f2f2;
+    }
+    &:focus {
+        border: 2px solid #00aad2;
+        outline: none;
+    }
+    @media screen and (max-width:992px) {
+        height: 60px;
+        background: #00aad2;
+        @include font-size(16px, 1);
+        color: #fff;
+        padding-right: 35px;
+    }
+}
+
+.search-area__field {
+    position: relative;
+    width: 572px;
+    margin: 0 auto;
+    padding-right: 55px;
+    background: #fff;
+    @media screen and (max-width: 992px) {
+        width: 100%;
+        padding-right: 0px;
+    }
+}
+
+.search-area__close {
+    @include inline-block(middle);
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: url('../assets/img/svg/close-black.svg') no-repeat 0 0;
+    background-size: cover;
+    overflow: hidden;
+    text-indent: -9999px;
+    z-index: 5;
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+}
+
+.search-area__submit {
+    position: absolute;
+    background: url('../assets/img/svg/search-black.svg') no-repeat center center;
+    top: 0;
+    right: 0;
+    width: 55px;
+    height: 50px;
+    overflow: hidden;
+    text-indent: -99999px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    @media screen and (max-width: 992px) {
+        width: 17px;
+        height: 60px;
+        right: 20px;
+        background: url('../assets/img/svg/search.svg') no-repeat center center;
+    }
+    @media screen and (max-width:767px) {
+        right: 15px;
+    }
+}
+
+.search-area__reset {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 17px;
+    height: 17px;
+    text-align: center;
+    background: url('../assets/img/svg/close-black.svg') no-repeat center center;
+    overflow: hidden;
+    text-indent: -99999px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    &.show {
+        opacity: 1;
+    }
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+}
+
+
+/*=====  End of search-area  ======*/

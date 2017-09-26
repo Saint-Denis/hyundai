@@ -1,0 +1,104 @@
+/*===================================
+=            page-select            =
+===================================*/
+
+.page-select.jq-selectbox {
+    width: 100%;
+    &.focused {
+        .jq-selectbox__select {
+            border: 1px solid #a4c6fd;
+        }
+    }
+    &.opened {
+        .jq-selectbox__trigger-arrow {
+            transform: translateY(-50%) rotate(180deg);
+        }
+    }
+    .jq-selectbox__select {
+        @include font-size(14px, 44px);
+        @include hyundai(regular);
+        padding: 0 25px;
+        width: 100%;
+        height: 44px;
+        box-shadow: none;
+        border: 1px solid transparent;
+        border-radius: 0;
+        text-shadow: none;
+        color: #000;
+        background: #f6f3f2;
+        box-sizing: border-box;
+        @media screen and (max-width: 767px) {
+            padding: 0px 15px;
+            height: 45px;
+        }
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+    .jq-selectbox__trigger-arrow {
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%) rotate(0);
+        border-top: 5px solid #000;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        transition: all 0.2s ease-in;
+    }
+    .jq-selectbox__dropdown {
+        margin: 0;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+        ul {
+            margin-bottom: 0;
+            li {
+                margin-bottom: 0;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+    li {
+        @include font-size(14px, 44px);
+        @include hyundai(regular);
+        padding: 0 25px;
+        width: 100%;
+        height: 44px;
+        box-shadow: none;
+        border: 0;
+        border-radius: 0;
+        border: 0;
+        border-right: 0;
+        border-top: 0;
+        border-left: 0;
+        border-bottom: 0;
+        text-shadow: none;
+        color: #000;
+        background: #f6f3f2;
+
+         @media screen and (max-width: 767px) {
+            padding: 0px 15px;
+            height: 45px;
+        }
+    }
+}
+
+.page-select.page-select--small {
+    margin-right: 15px;
+    width: 305px;
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    &:last-of-type {
+        margin-right: 0;
+        @media screen and (max-width: 767px) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+/*=====  End of page-select  ======*/

@@ -1,0 +1,23 @@
+/*===============================
+=            sharing            =
+===============================*/
+
+.sharing {
+    float: right;
+    @media screen and (max-width: 992px) {
+        display: none;
+    }
+}
+
+.sharing a {
+    font-size: 14px;
+    line-height: 17px;
+    text-decoration: none;
+    @include hyundai(medium);
+    display: inline-block;
+    padding: 0 0 0 25px;
+    background: url('../assets/img/content/ico_sharing.png') no-repeat 0 0;
+}
+
+
+/*=====  End of sharing  ======*/

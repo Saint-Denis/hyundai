@@ -1,0 +1,62 @@
+/*==================================
+=            share-list            =
+==================================*/
+
+.share-list {
+    display: flex;
+    margin: 30px 0 20px 0;
+    @media screen and (max-width: 767px) {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.share-list__item {
+    margin-left: 48px;
+    @media screen and (max-width: 767px) {
+        width: 50%;
+        margin:0;
+        margin-bottom:25px;
+    }
+    &:first-of-type {
+        margin-left: 0;
+    }
+}
+
+.share-list__link {
+    display: block;
+    width: 60px;
+    height: 43px;
+    text-indent: -9999px;
+    cursor: pointer;
+    @media screen and (max-width: 767px) {
+        margin:0 auto;
+    }
+    &--fb {
+        background: url('../assets/img/content/sns_share_layer_facebook.png') no-repeat;
+        &:hover {
+            background-position: 0 -43px !important;
+        }
+    }
+    &--tw {
+        background: url('../assets/img/content/sns_share_layer_twitter.png') no-repeat;
+        &:hover {
+            background-position: 0 -43px !important;
+        }
+    }
+    &--gl {
+        background: url('../assets/img/content/sns_share_layer_google.png') no-repeat;
+        &:hover {
+            background-position: 0 -43px !important;
+        }
+    }
+    &--pt {
+        background: url('../assets/img/content/sns_share_layer_pinterest.png') no-repeat;
+        &:hover {
+            background-position: 0 -43px !important;
+        }
+    }
+}
+
+
+/*=====  End of share-list  ======*/

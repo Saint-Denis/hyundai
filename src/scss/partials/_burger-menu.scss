@@ -1,0 +1,46 @@
+/*===================================
+=            burger-menu            =
+===================================*/
+
+.burger-menu {
+    display: none;
+    width: 20px;
+    cursor: pointer;
+
+    @media screen and (max-width: 992px) {
+        display: block;
+        position: relative;
+          order:4;
+        
+        span {
+        	position: relative;
+            display: block;
+            background: #000;
+            width: 100%;
+            height: 2px;
+            margin-bottom: 5px;
+            top: 0px;
+            transition: all 0.3s ease-in-out;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &.open span:nth-child(2) {
+            width: 0;
+            opacity: 0;
+        }
+
+        &.open span:nth-child(1) {
+            transform: rotate(-45deg);
+            top: 7px;
+        }
+        &.open span:nth-child(3) {
+            transform: rotate(45deg);
+            top: -7px;
+        }
+    }
+}
+
+
+/*=====  End of burger-menu  ======*/
