@@ -705,15 +705,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
   // links pages
   $('body').append(
       '<div style="position: fixed; z-index: 1005; bottom: 0; right: 0; background: #fff; border: solid 1px #828286; width: 250px;"> \
@@ -728,5 +719,6 @@
      <li><a href="form.html">Форма</a></li> \
      <li><a href="index.html">Главная</a></li> \
      <li><a href="auto-list.html">Список авто</a></li> \
+     <li><a href="auto.html">Авто</a></li> \
  </ol> \
 </div>');
