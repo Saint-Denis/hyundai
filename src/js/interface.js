@@ -26,15 +26,7 @@
       }
   }
 
-  // function positionIndicator(elem, indicator) {
-  //     var left = elem.offset().left,
-  //         width = elem.width();
 
-  //     indicator.stop().animate({
-  //         left: left,
-  //         width: width
-  //     });
-  // }
 
   function dot() {
       if ($('body').hasClass('mobile')) {
@@ -50,22 +42,7 @@
       flexibility(document.documentElement);
 
 
-      //Slinding line
-      // (function() {
-      //     var $indicator = $('<span class="indicator"></span>'),
-      //         $menu = $(".top-nav__list"),
-      //         $activeItem = $(".top-nav__item.active");
-
-      //     positionIndicator($activeItem, $indicator);
-
-      //     $menu.append($indicator);
-
-      //     setTimeout(function() {
-      //         $indicator.css("opacity", 1);
-      //     }, 500);
-      // }());
-
-
+    
       //SELECT
       (function() {
           $('.page-select').styler();
@@ -750,5 +727,6 @@
      <li><a href="news-detail.html">Детальная новостей</a></li> \
      <li><a href="form.html">Форма</a></li> \
      <li><a href="index.html">Главная</a></li> \
+     <li><a href="auto-list.html">Список авто</a></li> \
  </ol> \
 </div>');
