@@ -1,0 +1,98 @@
+/*================================
+=            trade-in            =
+================================*/
+
+.trade-in {
+    margin-bottom: 30px;
+    &--full {
+        .trade-in__wrap {
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+            }
+        }
+        .trade-in__img {
+            width: 50%;
+            height: 360px;
+            @media screen and (max-width: 767px) {
+                width: 100%;
+                height: 200px;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 480px) {
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.trade-in__wrap {
+    display: flex;
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+}
+
+.trade-in__img {
+    position: relative;
+    width: 355px;
+    height: 235px;
+    margin-right: 15px;
+    background-size: cover!important;
+    background-repeat: no-repeat!important;
+    background-position: center center!important;
+    @media screen and (max-width: 992px) {
+        width: 250px;
+        height: 200px;
+     }
+    @media screen and (max-width: 767px) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
+
+.trade-in__price {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    background: #002c5f;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.trade-in__characteristics {
+    flex:1;
+}
+
+.trade-in__characteristics-item span {
+    color: #000;
+    font-weight: 700;
+}
+
+.trade-in__phone span {
+    color: #000;
+    font-weight: 700;
+}
+
+p.trade-in__desc {
+    margin-top: 20px;
+}
+
+.trade-in__characteristics-list {
+    display: flex;
+    justify-content: space-between;
+
+     @media screen and (max-width: 767px) {
+       display: block;
+     }
+}
+.trade-in__characteristics-column {
+    width: 50%;
+}
+
+
+/*=====  End of trade-in  ======*/
