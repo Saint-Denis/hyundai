@@ -16,12 +16,16 @@
         @include font-size(58px, 64px);
         color: #fff;
         text-align: left;
-        max-width: 320px;
+        max-width: 650px;
         margin: 0;
         margin-bottom: 12px;
         @media screen and (max-width: 767px) {
             @include font-size(30px, 35px);
             text-align: center;
+        }
+
+        &.headline-block_title--black {
+            color:#000;
         }
     }
     p {
@@ -31,6 +35,10 @@
             @include font-size(14px, 18px);
             text-align: left;
             max-width: 100%;
+        }
+
+        &.headline-block__text--black {
+            color:#000;
         }
     }
 }

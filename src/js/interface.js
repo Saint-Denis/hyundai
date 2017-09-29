@@ -38,9 +38,46 @@
   }
 
 
+  $(window).on('resize load', function() {
+      makeMobileImgSlider();
+      addResponsiveClasses();
+      dot();
+  });
+
+
+
 
   $(document).ready(function() {
       flexibility(document.documentElement);
+
+      //FIXED MENU
+      (function() {
+          var $navPosition,
+              $winPos;
+
+          var $nav = $('.menu-section');
+
+          function refreshVar() {
+              $navPosition = $nav.offset().top;
+          };
+
+          refreshVar();
+
+          $(window).on('resize', refreshVar);
+
+          $(window).on('scroll', function() {
+              $winPos = $(this).scrollTop();
+
+              if ($winPos >= $navPosition) {
+                  $nav.addClass('fixed');
+              } else {
+                  $nav.removeClass('fixed');
+              }
+
+          });
+
+
+      }());
 
 
 
@@ -737,11 +774,6 @@
 
 
 
-  $(window).on('resize load', function() {
-      makeMobileImgSlider();
-      addResponsiveClasses();
-      dot();
-  });
 
 
 
@@ -760,5 +792,6 @@
      <li><a href="index.html">Главная</a></li> \
      <li><a href="auto-list.html">Список авто</a></li> \
      <li><a href="auto.html">Авто</a></li> \
+     <li><a href="models.html">Модельный ряд</a></li> \
  </ol> \
 </div>');

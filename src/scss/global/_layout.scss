@@ -33,6 +33,17 @@
     &--auto .btn-section--center {
         margin-bottom:0;
     }
+
+    &--models {
+        .page-content {
+            padding:0;
+        }
+
+        .page-content .page-container {
+            max-width:100%;
+            padding:0;
+        }
+    }
 }
 
 

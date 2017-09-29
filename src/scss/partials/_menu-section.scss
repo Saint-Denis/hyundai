@@ -1,0 +1,61 @@
+/*====================================
+=            menu-section            =
+====================================*/
+
+.menu-section {
+    background: #fff;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.05);
+    transition:all 0.35s ease-in;
+
+    &.fixed {
+        position: fixed;
+        top:0;
+        width: 100%;
+        z-index: 101;
+    }
+}
+
+.menu-section__list {
+    display: flex;
+    list-style: none;
+}
+
+.menu-section {
+    padding: 21px 0;
+}
+
+.menu-section__wrap {
+    display: flex;
+        justify-content: space-between;
+    position: relative;
+    width: 100%;
+    max-width: 1160px;
+    padding: 0 20px;
+    margin: 0 auto;
+    @media screen and (max-width: 767px) {
+        padding: 0 15px;
+    }
+}
+
+.menu-section__title {
+    @include hyundai(medium);
+    color: #000;
+}
+
+.menu-section__item {
+	padding:0 25px;
+	&.active {
+		.menu-section__link {
+			color: #00aad2;
+		}
+	}
+}
+
+.menu-section__link {
+    &:hover {
+        color: #00aad2;
+    }
+}
+
+
+/*=====  End of menu-section  ======*/
